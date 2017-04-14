@@ -1,0 +1,376 @@
+/* ===== Fonts ==================================================
+   ========================================================================== */
+
+@font-face {
+ font-family: 'Open Sans';
+ src: url(../fonts/OpenSans-Regular.ttf);
+ font-weight: normal;
+}
+
+@font-face {
+ font-family: 'Open Sans';
+ src: url(../fonts/OpenSans-Light.ttf);
+ font-weight: 100;
+}
+
+@font-face {
+ font-family: 'Open Sans';
+ src: url(../fonts/OpenSans-Semibold.ttf);
+ font-weight: 500;
+}
+
+/* ===== Some Config ==================================================
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Open Sans';
+    font-weight: normal;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Custom Styles ==================================================
+   ========================================================================== */
+
+.main-aside {
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  float: left;
+  background-color: #2B2F3E;
+}
+
+.main-header {
+  margin: 0px;
+  padding: 20px 30px;
+  font-size: 36px;
+  font-weight: 100;
+  color: #434756;
+}
+
+.overview {
+  background-color: #FF3951;
+  margin-top: 65px;
+}
+
+.overview-span {
+  font-size: 18px;
+  display: block;
+  padding: 20px 30px;
+  color: #fff;
+}
+
+.main-section {
+  width: 75%;
+  height: auto;
+  float: right;
+  background-color: #f9f9f9;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 1px 0px 1px 1px #ccc;
+  border: 1.25px solid rgba(242, 242, 242, 1);
+  width: 43.5%;
+  min-height: 500px;
+  margin: 5% 0 5% 5%;
+}
+
+.card.right {
+    margin: 5% 5% 5% 0;
+}
+
+.card .main-header {
+  padding-left: 23px;
+  padding-top: 5px;
+}
+
+.card .container {
+  padding-top: 0px;
+}
+
+.card.left .container {
+  padding-left: 30px;
+}
+
+.card.right .main-header {
+  padding-left: 20px;
+}
+
+.input-container {
+    margin-bottom: 30px;
+}
+
+.item-input {
+  width: 60%;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.item-add {
+  width: 31%;
+  float: right;
+  height: 40px;
+  outline: none;
+  color: #fff;
+  background-color: #27ccc0;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+}
+
+.item-text {
+  margin: 0px;
+  float: left;
+  font-weight: 500;
+  padding: 6px 0px;
+}
+
+.comment-number {
+  margin: 5px 0px 0px 10px;
+  color: #fff;
+  border-radius: 15px;
+  background-color: #27ccc0;
+  float: left;
+  width: 45px;
+  height: 25px;
+  font-weight: 500;
+}
+
+.comment-number span {
+  display: block;
+  padding-top: 1px;
+  text-align: center;
+}
+
+.item-del {
+  width: 21%;
+  height: 35px;
+  float: right;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ff3951;
+  color: #ff3951;
+  outline: none;
+}
+
+.item-container {
+  cursor: pointer;
+  overflow: hidden;
+  padding: 10px 20px;
+  border-bottom: 2px solid #f9f9f9;
+  border-top: 2px solid #fff;
+  border-left: 4px solid transparent;
+  position: relative;
+  right: 3px;
+}
+
+.active-item {
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  position: relative;
+  border-left: 4px solid red;
+}
+
+.comment {
+  margin: 10px 0px;
+  overflow: hidden;
+}
+
+.comment-image {
+  float: left;
+  width: 70px;
+  height: 70px;
+  background-color: #ff8a00;
+}
+
+.comment:nth-child(2n) .comment-image{
+  background-color: #47568c;
+}
+
+.comment-text {
+  float: right;
+  width: 75%;
+  margin: 0px;
+  font-size: 12px;
+}
+
+.comment-input-container {
+  overflow: hidden;
+}
+
+.comment-input-container .comment-image {
+  background-color: #e6e6e6;
+}
+
+.comment-input-container .comment-text textarea {
+  width: 98%;
+  height: 90px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.comments-label {
+  color: #27CCC0;
+  text-align: center;
+}
+
+.comment-submit {
+  position: relative;
+  margin: 20px 0px;
+  width: 150px;
+  height: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid red;
+  border-radius: 5px;
+  color: red;
+  background-color: #fff;
+  font-weight: normal;
+  font-size: 15px;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+  padding-top: 20px;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (max-width: 1000px) {
+  .card {
+    width: 80%;
+    margin: 20px auto;
+    float: none;
+  }
+  
+  .card.left {
+    float: none;
+  }
+
+  .card.right {
+    margin: 0 auto;
+    float: none;
+    padding-bottom: 100px;
+  }
+
+  .comment-input-container .comment-text {
+    float: none;
+    margin: 0 auto;
+  }
+
+  .comment-input-container .comment-image {
+    margin: 15px auto;
+    float: none;
+  }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.container {
+  padding: 20px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
