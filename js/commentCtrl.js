@@ -17,11 +17,12 @@ app.controller('commentCtrl', function($scope) {
     }
 
     this.setComment = function(comment) {
-        this.currentItem.comments.push(comment);
+        var testItem = this.currentItem;
+        testItem.comments.push(comment);
         var items = JSON.parse(localStorage.getItem("items"));
         for(var i = 0; i < items.length; i++) {
-            if(items[i].index == this.currentItem.index) {
-                items[i].comments = this.currentItem.comments;
+            if(items[i].index == testItem.index) {
+                items[i].comments = testItem.comments;
                 items[i].commentNumber += 1;
             }
         }
@@ -45,5 +46,4 @@ app.controller('commentCtrl', function($scope) {
             }
         }
     }.bind(this)); 
-    
 });

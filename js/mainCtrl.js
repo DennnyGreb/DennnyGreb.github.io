@@ -2,8 +2,20 @@
 var app = angular.module('mainApp', []);
 
 app.controller('mainCtrl', function($rootScope, $document) {
-
-    this.counter = 2;
+    this.counter;
+    if(!localStorage.getItem("items")) {
+        this.counter = 2;
+    }
+    else {
+        var items = JSON.parse(localStorage.getItem("items"));
+        var maxItem = items.slice(-1)[0];
+        if(maxItem) {
+            this.counter = maxItem.index;
+        }
+        else {
+            this.counter = 0;
+        }
+    }
     this.selected;
 
     this.increaseCounter = function() {
@@ -12,7 +24,7 @@ app.controller('mainCtrl', function($rootScope, $document) {
 
     this.setCtrlItems = function() {
         this.items = JSON.parse(localStorage.getItem("items"));
-    }
+    }.bind(this);
 
     this.getLSItems = function() {
         return JSON.parse(localStorage.getItem("items"));
