@@ -8,7 +8,7 @@ app.controller('mainCtrl', function($rootScope, $document) {
     }
     else {
         var items = JSON.parse(localStorage.getItem("items"));
-        var maxItem = items.slice(-1)[0];
+        var maxItem = items[0];
         if(maxItem) {
             this.counter = maxItem.index;
         }
@@ -48,7 +48,7 @@ app.controller('mainCtrl', function($rootScope, $document) {
         this.increaseCounter();
         var oldItems = this.getLSItems();
         if(oldItems) {
-            oldItems.push({ itemText: item, commentNumber: 0,  index: this.counter, comments: [] });
+            oldItems.unshift({ itemText: item, commentNumber: 0,  index: this.counter, comments: [] });
             var newItems = oldItems;
             localStorage.setItem("items", JSON.stringify(newItems));
         }
